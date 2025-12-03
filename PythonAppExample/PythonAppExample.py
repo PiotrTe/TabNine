@@ -61,8 +61,8 @@ def _on_any_key(event) -> None:
 
 
 def main() -> None:
-    print("Running: hold Ctrl and press any letter (e.g. P or A) to emit the Tab sequence without suppressing the letter.")
-    print("Press Tab (alone) to emit Tab sequence as before. Press Esc to exit, or Ctrl+C in this console.")
+    print(f"Running: \n[TurboMode] hold Capslock and press any letter (e.g. P or A) to emit the Tab sequence")
+    print(f"Press Tab (alone) to emit Tab sequence. Press Esc to exit, or Ctrl+C in this console.")
 
     # Intercept Tab and suppress the original so only the synthesized tabs are seen
     keyboard.on_press_key("tab", _on_tab, suppress=True)
